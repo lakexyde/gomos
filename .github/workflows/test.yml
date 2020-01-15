@@ -6,7 +6,6 @@ jobs:
       matrix:
         go-version: [1.13.x]
         platform: [ubuntu-latest]
-        codecov-token: b8c39d41-7374-4223-bb04-c5dc3cc88238
     runs-on: ${{ matrix.platform }}
     steps:
     - name: Install Go
@@ -26,5 +25,5 @@ jobs:
     - name: Upload coverage to Codecov  
       uses: codecov/codecov-action@v1
       with:
-        token: ${{ matrix.codecov-token }}
+        token: ${{ secrets.CODECOV_TOKEN }}
         file: ./coverage.out
