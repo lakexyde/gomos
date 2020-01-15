@@ -58,7 +58,7 @@ func (s Schema) Create() *Schema {
 }
 
 // Data returns the Schema data
-func (s *Schema) Data() (bson.M, error) {
+func (s Schema) Data() (bson.M, error) {
 	var err error
 	if !s.empty {
 		return s.data, err
