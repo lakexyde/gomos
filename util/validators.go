@@ -12,8 +12,7 @@ func ValidateEmail(value string) bool {
 	return re.Match([]byte(value))
 }
 
-// ValidatePhoneNumber validates a phone number
-// returns a true or false
+// ValidatePhoneNumber checks if a phone number is valid
 func ValidatePhoneNumber(value string) bool {
 	re := regexp.MustCompile(`^\+[0-9]{1,3}[0-9]{4,14}$`)
 	return re.Match([]byte(value))
